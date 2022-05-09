@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Poppins;
+
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 700;
+}
+
+main, header {
+  border: solid 10px;
+  justify-self: center;
+  align-self: center;
+  padding: 1em;
+  transition: 2000ms ease-in-out;
+}
+
+main {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: #000;
+}
+
+main, header {
+  /* color: rgb(0, 255, 34); */
+  
+}
+
+header {
+  font-size: 4em;
+  transform: scale(1.1) rotate(10deg);
+}
+
+#portrait {
+  max-width: 400px;
+  border-radius: 200px;
+  border: solid 10px #fff;
+  transition: 2000ms ease-in-out;
+}
+
+#portrait {
+  transform: scale(1.1) rotate(-10deg);
+  /* border-color: rgb(0, 255, 34); */
+}
+
