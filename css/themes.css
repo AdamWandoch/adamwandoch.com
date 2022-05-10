@@ -7,49 +7,62 @@ html, body {
 }
 
 body {
-  background-color: #000;
+  background-image: url("/img/nebula.jpg");
+  background-size: 100%;
   color: #fff;
   font-family: Poppins;
+}
 
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: #fff;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 2em;
   font-weight: 700;
 }
 
 main, header {
+  background-color: #000;
   border: solid 10px;
   justify-self: center;
   align-self: center;
   padding: 1em;
   transition: 2000ms ease-in-out;
-}
-
-main {
-  transform: scale(1.1) rotate(-5deg);
-  background-color: #000;
-}
-
-main, header {
-  /* color: rgb(0, 255, 34); */
-  
+  font-size: 1em;
+  min-width: fit-content;
 }
 
 header {
-  font-size: 4em;
-  transform: scale(1.1) rotate(10deg);
+  max-width: 20%;
+  max-height: 20%;
+  transform: scale(1.1) rotate(370deg);
+}
+
+main {
+  transform: scale(1.1) rotate(-375deg);
+  background-color: #000;
+}
+
+main:hover {
+  color: rgb(0, 255, 13);
 }
 
 #portrait {
-  max-width: 400px;
-  border-radius: 200px;
+  max-width: 200px;
+  border-radius: 9999px;
   border: solid 10px #fff;
   transition: 2000ms ease-in-out;
+  transform: scale(1.1) rotate(-730deg);
 }
 
-#portrait {
-  transform: scale(1.1) rotate(-10deg);
-  /* border-color: rgb(0, 255, 34); */
+#portrait:hover {
+  border-color: rgb(0, 255, 13);
 }
 
+@media screen and (min-width: 700px) {
+  #portrait {
+    max-width: 400px;
+  }
+}

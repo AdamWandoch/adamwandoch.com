@@ -1,7 +1,7 @@
 body {
   display: grid;
-  grid: 1fr 1fr / 0.75fr;
+  grid: 1fr 1fr / 1fr;
   justify-content: center;
   align-content: center;
-  gap: 0.5em;
+  gap: 2em;
 }
