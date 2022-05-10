@@ -1,5 +1,13 @@
+:root {
+  --accent-color: rgb(255, 141, 47);
+  --accent-opposite: rgb(47, 141, 255);
+}
+
 * {
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 html, body {
@@ -13,83 +21,69 @@ body {
   font-family: Poppins;
 }
 
+.glow {
+  filter: drop-shadow(0 0 1em #fff);
+}
+
 a, a:hover, a:visited {
   text-decoration: none;
   color: #fff;
 }
 
-h1 {
+main {
+  max-width: 100%;
+  height: 100%;
+}
+
+.portrait {
+  border-radius: 9999px;
+  border: solid 5px #fff;
+  filter: brightness(105%) opacity(98%);
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.hi {
+  transform: rotate(-10deg);
+  position: relative;
+  left: -15%;
+  top: 30%;
+  z-index: 1;
+}
+
+.and {
+  position: relative;
+  left: 15%;
+  bottom: 100%;
+  border-color: var(--accent-color);
+}
+
+.you {
+  transform: rotate(10deg);
+  position: relative;
+  top: -90%;
+  left: -10%;
+}
+
+p {
+  filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
+  margin: auto;
   font-size: 2em;
   font-weight: 700;
-}
-
-main {
-  background-color: #000;
-  border: solid 10px;
-  justify-self: center;
-  align-self: center;
-  padding: 1em;
-  transition: 2000ms ease-in-out;
-  font-size: 1em;
-  min-width: fit-content;
-}
-
-main {
-  transform: rotate(-375deg);
-  background-color: #000;
-  font-size: 0.8em;
-}
-
-main:hover {
-  filter: invert() hue-rotate(180deg);
-  transform: rotate(-365deg);
-}
-
-#portrait {
-  max-width: 200px;
-  border-radius: 9999px;
-  border: solid 10px #fff;
-  transition: 2000ms ease-in-out;
-  transform: rotate(-730deg);
-  /* position: relative; */
-  /* top: 50%; */
-}
-
-.floating {
-  background-color: #000;
-  font-size: 1.4em;
-  width: min-content;
+  width: max-content;
   padding: 0.6em;
-  border: solid 5px #fff;
-  position: absolute;
-  top: 222%;
-  transform: rotate(-10deg);
+  border: solid 5px;
 }
 
 .color {
-  color: rgb(255, 141, 47);
+  color: var(--accent-color);
 }
 
-/* @media screen and (min-width: 700px) {
-  #portrait {
-    max-width: 400px;
-  }
+.black-bg {
+  background-color: black;
+  filter: drop-shadow(0 0 20px var(--accent-opposite));
+}
 
-  header > p {
-    font-size: 1.15em;
-  }
-
-  main > p {
-    font-size: 1.7em;
-  }
-
-  .floating {
-    top: 250%;
-    font-size: 2em;
-    border: solid 7px;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
-} */
+@media screen and (mix-width: 600px) {
+    
+}

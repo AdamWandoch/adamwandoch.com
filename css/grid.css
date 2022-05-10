@@ -1,7 +1,35 @@
-body {
+main {
   display: grid;
-  grid: 1fr / 1fr;
-  justify-content: center;
-  align-content: center;
-  gap: 2em;
+  grid: "hi      " 1fr
+        "portrait" 4fr
+        "and     " 1fr 
+        "you     " 1fr / 
+        1fr;
+  align-items: center;
+  justify-items: center;
 }
+
+
+@media screen and (min-width: 500px) {
+  main {
+    grid: "hi  portrait" 1fr
+          "and portrait" 1fr
+          "you portrait" 1fr /
+          1fr 1fr;
+  }
+
+  .hi, .and, .you {
+    position: unset;
+    transform: none;
+  }
+
+  .portrait {
+    grid-column: span 3;
+  }
+  
+}
+
+.hi { grid-area: hi; }
+.portrait { grid-area: portrait;}
+.and { grid-area: and; }
+.you { grid-area: you; }
