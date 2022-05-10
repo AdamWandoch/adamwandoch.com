@@ -11,6 +11,7 @@ body {
   background-size: 100%;
   color: #fff;
   font-family: Poppins;
+  /* font-size: 1em; */
 }
 
 a, a:hover, a:visited {
@@ -38,16 +39,18 @@ header {
   max-width: 20%;
   max-height: 20%;
   transform: scale(1.1) rotate(370deg);
+  align-items: center;
 }
 
 main {
-  transform: scale(1.1) rotate(-375deg);
+  transform: rotate(-375deg);
   background-color: #000;
   font-size: 0.8em;
 }
 
 main:hover {
-  color: rgb(0, 255, 13);
+  filter: invert() hue-rotate(180deg);
+  transform: rotate(-365deg);
 }
 
 #portrait {
@@ -55,11 +58,21 @@ main:hover {
   border-radius: 9999px;
   border: solid 10px #fff;
   transition: 2000ms ease-in-out;
-  transform: scale(1.1) rotate(-730deg);
+  transform: rotate(-730deg);
 }
 
-#portrait:hover {
-  border-color: rgb(0, 255, 13);
+.floating {
+  background-color: #000;
+  font-size: 1.4em;
+  width: min-content;
+  padding: 0.6em;
+  position: absolute;
+  top: 250%;
+  transform: rotate(-10deg);
+}
+
+.color {
+  color: rgb(255, 141, 47);
 }
 
 @media screen and (min-width: 700px) {
@@ -67,7 +80,21 @@ main:hover {
     max-width: 400px;
   }
 
-  main {
-    font-size: 1.4em;
+  header > p {
+    font-size: 1.15em;
+  }
+
+  main > p {
+    font-size: 1.7em;
+  }
+
+  .floating {
+    top: 250%;
+    font-size: 2em;
+    border: solid 7px;
+  }
+
+  h1 {
+    font-size: 2.5em;
   }
 }
