@@ -1,6 +1,6 @@
 body {
   display: grid;
-  grid: 1fr 1fr / 1fr;
+  grid: 1fr / 1fr;
   justify-content: center;
   align-content: center;
   gap: 2em;
