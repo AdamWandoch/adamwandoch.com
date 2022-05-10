@@ -43,6 +43,7 @@ header {
 main {
   transform: scale(1.1) rotate(-375deg);
   background-color: #000;
+  font-size: 0.8em;
 }
 
 main:hover {
@@ -64,5 +65,9 @@ main:hover {
 @media screen and (min-width: 700px) {
   #portrait {
     max-width: 400px;
+  }
+
+  main {
+    font-size: 1.4em;
   }
 }
