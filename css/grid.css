@@ -11,23 +11,31 @@ main {
 
 
 @media (min-width: 500px) {
-  main {
+  bo
+  
+  .and {
+    position: relative;
+    left: 5%;
+  }
+  
+  /* main {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 3fr;
+  }
+  
+  .portrait {
+    grid-row: span 3;
   }
 
   .hi, .and, .you {
     position: unset;
     transform: none;
   }
-  
-  .portrait {
-    grid-row: span 3;
-  }
-  
+    
 }
 
-/* .hi { grid-area: hi; }
+.hi { grid-area: hi; }
 .portrait { grid-area: portrait; }
 .and { grid-area: and; }
 .you { grid-area: you; } */
+}
