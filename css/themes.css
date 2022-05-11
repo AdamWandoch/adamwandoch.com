@@ -44,7 +44,8 @@ main {
   border: solid 0.15em var(--primary-color);
   filter: brightness(105%) 
           opacity(98%) 
-          drop-shadow(0 0 0.5em var(--primary-color));
+          drop-shadow(0 0 0.5em var(--primary-color))
+          saturate(95%);
   min-width: 90%;
   max-width: 90%;
   margin: auto;
@@ -79,7 +80,7 @@ a, a:hover, a:visited {
   
   #first {
     position: relative;
-    top: 50%;
+    top: 20%;
   }
   
   #third {
