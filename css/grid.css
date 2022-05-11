@@ -5,37 +5,16 @@ main {
         1fr 
         1fr / 
         1fr;
-  align-items: center;
-  justify-items: center;
+  gap: 0.5em
 }
 
 
 @media (min-width: 500px) {
-  bo
-  
-  .and {
-    position: relative;
-    left: 5%;
-  }
-  
-  /* main {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 3fr;
-  }
-  
-  .portrait {
+  #photo {
     grid-row: span 3;
   }
 
-  .hi, .and, .you {
-    position: unset;
-    transform: none;
+  main {
+    grid: repeat(3, 1fr) / 1fr 1fr;
   }
-    
-}
-
-.hi { grid-area: hi; }
-.portrait { grid-area: portrait; }
-.and { grid-area: and; }
-.you { grid-area: you; } */
 }

@@ -1,6 +1,6 @@
 :root {
-  --accent-color: rgb(255, 141, 47);
-  --accent-opposite: rgb(47, 141, 255);
+  --primary-color: #fff;
+  --secondary-color: #000;
 }
 
 * {
@@ -15,10 +15,51 @@ html, body {
 }
 
 body {
+  margin: 0.5em 0 0.5em 0;
   background-image: url("/img/nebula.jpg");
   background-size: 100%;
-  color: #fff;
+  color: var(--primary-color);
   font-family: Poppins;
+}
+
+main {
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.05);
+  display: grid;
+  border: solid 0.1em;
+  padding: 0.4em;
+  min-width: 90%;
+  justify-items: center;
+  align-items: center;
+}
+
+#portrait {
+  border-radius: 9999px;
+  border: solid 0.15em var(--primary-color);
+  filter: brightness(105%) 
+          opacity(98%) 
+          drop-shadow(0 0 0.5em var(--primary-color));
+  min-width: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+
+#photo {
+  background-color: unset;
+  border: unset;
+}
+
+/* EFFECTS */
+
+.black-bg {
+  background-color: black;
+  filter: drop-shadow(0 0 20px var(--accent-opposite));
 }
 
 .glow {
@@ -30,68 +71,20 @@ a, a:hover, a:visited {
   color: #fff;
 }
 
-main {
-  max-width: 100%;
-  height: 100%;
-}
-
-.portrait {
-  border-radius: 9999px;
-  border: solid 5px #fff;
-  filter: brightness(105%) opacity(98%);
-  min-width: 100%;
-  max-width: 100%;
-}
-
-p {
-  filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
-  margin: auto;
-  font-size: 2em;
-  font-weight: 700;
-  width: max-content;
-  padding: 0.6em;
-  border: solid 5px;
-}
-
-.hi {
-  transform: rotate(-10deg);
-  position: relative;
-  left: -15%;
-  top: 30%;
-  z-index: 1;
-}
-
-.and {
-  position: relative;
-  left: 15%;
-  bottom: 100%;
-  border-color: var(--accent-color);
-}
-
-.you {
-  transform: rotate(10deg);
-  position: relative;
-  top: -90%;
-  left: -10%;
-}
-
-
-.color {
-  color: var(--accent-color);
-}
-
-.black-bg {
-  background-color: black;
-  filter: drop-shadow(0 0 20px var(--accent-opposite));
-}
-
-
-@media (min_width: 500px) {
-
-  body {
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    background-position: 50% 50%;
+@media (min-width: 500px) {
+  
+  * {
+    margin: none;
+  }
+  
+  #first {
+    position: relative;
+    top: 50%;
+  }
+  
+  #third {
+    position: relative;
+    bottom: 50%;
   }
   
 }
