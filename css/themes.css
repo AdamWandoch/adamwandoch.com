@@ -43,6 +43,16 @@ main {
   max-width: 100%;
 }
 
+p {
+  filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
+  margin: auto;
+  font-size: 2em;
+  font-weight: 700;
+  width: max-content;
+  padding: 0.6em;
+  border: solid 5px;
+}
+
 .hi {
   transform: rotate(-10deg);
   position: relative;
@@ -65,15 +75,6 @@ main {
   left: -10%;
 }
 
-p {
-  filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
-  margin: auto;
-  font-size: 2em;
-  font-weight: 700;
-  width: max-content;
-  padding: 0.6em;
-  border: solid 5px;
-}
 
 .color {
   color: var(--accent-color);
@@ -84,6 +85,3 @@ p {
   filter: drop-shadow(0 0 20px var(--accent-opposite));
 }
 
-@media screen and (mix-width: 600px) {
-    
-}

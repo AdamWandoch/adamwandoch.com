@@ -1,35 +1,33 @@
 main {
   display: grid;
-  grid: "hi      " 1fr
-        "portrait" 4fr
-        "and     " 1fr 
-        "you     " 1fr / 
+  grid: 1fr
+        4fr
+        1fr 
+        1fr / 
         1fr;
   align-items: center;
   justify-items: center;
 }
 
 
-@media screen and (min-width: 500px) {
+@media (min-width: 500px) {
   main {
-    grid: "hi  portrait" 1fr
-          "and portrait" 1fr
-          "you portrait" 1fr /
-          1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
   }
 
   .hi, .and, .you {
     position: unset;
     transform: none;
   }
-
+  
   .portrait {
-    grid-column: span 3;
+    grid-row: span 3;
   }
   
 }
 
-.hi { grid-area: hi; }
-.portrait { grid-area: portrait;}
+/* .hi { grid-area: hi; }
+.portrait { grid-area: portrait; }
 .and { grid-area: and; }
-.you { grid-area: you; }
+.you { grid-area: you; } */
