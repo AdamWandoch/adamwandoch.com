@@ -1,7 +1,20 @@
-body {
+main {
   display: grid;
-  grid: 1fr 1fr / 1fr;
-  justify-content: center;
-  align-content: center;
-  gap: 2em;
+  grid: 1fr
+        4fr
+        1fr 
+        1fr / 
+        1fr;
+  gap: 0.5em
+}
+
+
+@media (min-width: 500px) {
+  #photo {
+    grid-row: span 3;
+  }
+
+  main {
+    grid: repeat(3, 1fr) / 1fr 1fr;
+  }
 }

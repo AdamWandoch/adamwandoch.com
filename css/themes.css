@@ -1,5 +1,13 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
 * {
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 html, body {
@@ -7,10 +15,56 @@ html, body {
 }
 
 body {
+  margin: 0.5em 0 0.5em 0;
   background-image: url("/img/nebula.jpg");
   background-size: 100%;
-  color: #fff;
+  color: var(--primary-color);
   font-family: Poppins;
+}
+
+main {
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.05);
+  display: grid;
+  border: solid 0.1em;
+  padding: 0.4em;
+  min-width: 90%;
+  justify-items: center;
+  align-items: center;
+}
+
+#portrait {
+  border-radius: 9999px;
+  border: solid 0.15em var(--primary-color);
+  filter: brightness(105%) 
+          opacity(98%) 
+          drop-shadow(0 0 0.5em var(--primary-color))
+          saturate(95%);
+  min-width: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+
+#photo {
+  background-color: unset;
+  border: unset;
+}
+
+/* EFFECTS */
+
+.black-bg {
+  background-color: black;
+  filter: drop-shadow(0 0 20px var(--accent-opposite));
+}
+
+.glow {
+  filter: drop-shadow(0 0 1em #fff);
 }
 
 a, a:hover, a:visited {
@@ -18,85 +72,20 @@ a, a:hover, a:visited {
   color: #fff;
 }
 
-h1 {
-  font-size: 2em;
-  font-weight: 700;
-}
-
-main, header {
-  background-color: #000;
-  border: solid 10px;
-  justify-self: center;
-  align-self: center;
-  padding: 1em;
-  transition: 2000ms ease-in-out;
-  font-size: 1em;
-  min-width: fit-content;
-}
-
-header {
-  max-width: 20%;
-  max-height: 20%;
-  transform: scale(1.1) rotate(370deg);
-  align-items: center;
-}
-
-main {
-  transform: rotate(-375deg);
-  background-color: #000;
-  font-size: 0.8em;
-}
-
-main:hover {
-  filter: invert() hue-rotate(180deg);
-  transform: rotate(-365deg);
-}
-
-#portrait {
-  max-width: 200px;
-  border-radius: 9999px;
-  border: solid 10px #fff;
-  transition: 2000ms ease-in-out;
-  transform: rotate(-730deg);
-  /* position: relative; */
-  /* top: 50%; */
-}
-
-.floating {
-  background-color: #000;
-  font-size: 1.4em;
-  width: min-content;
-  padding: 0.6em;
-  border: solid 5px #fff;
-  position: absolute;
-  top: 222%;
-  transform: rotate(-10deg);
-}
-
-.color {
-  color: rgb(255, 141, 47);
-}
-
-@media screen and (min-width: 700px) {
-  #portrait {
-    max-width: 400px;
+@media (min-width: 500px) {
+  
+  * {
+    margin: none;
   }
-
-  header > p {
-    font-size: 1.15em;
+  
+  #first {
+    position: relative;
+    top: 20%;
   }
-
-  main > p {
-    font-size: 1.7em;
+  
+  #third {
+    position: relative;
+    bottom: 50%;
   }
-
-  .floating {
-    top: 250%;
-    font-size: 2em;
-    border: solid 7px;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
+  
 }
