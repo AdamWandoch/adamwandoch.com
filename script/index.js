@@ -11,11 +11,16 @@ window.addEventListener("DOMContentLoaded", function() {
       "people!"
     ]
 
+    // reveal the page
+    const main = document.querySelector("main");
+    setTimeout(() => {
+      main.classList.add("filter-unset");
+    }, 1000);
+
     for (let i = 0; i < words.length; i++) {
       const word = words[i];
       applyAccent(word);
     }
-
     
     setInterval(() => {
     const spans = document.getElementsByClassName("accent");
@@ -39,10 +44,9 @@ function applyAccent(searchString) {
 function animateWords(spans, delay) {
   for (let i = 0; i < spans.length; i++) {
     const span = spans[i];
-    console.log(span);
     const timeout = (i + 1) * delay;
     setTimeout(() => {
-      span.classList.toggle("invert");
+      span.classList.toggle("animation-effect");
     }, timeout);
   }
 }

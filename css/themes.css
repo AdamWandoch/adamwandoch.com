@@ -2,6 +2,8 @@
   --primary-color: #fff;
   --secondary-color: #000;
   --accent-color: rgb(255, 102, 0);
+  --accent-color2: rgb(0, 102, 255);
+  --accent-color3: rgb(255, 171, 74);
 }
 
 * {
@@ -22,6 +24,7 @@ body {
   background-size: 100%;
   color: var(--primary-color);
   font-family: Poppins;
+  filter: blur(2px);
 }
 
 main {
@@ -29,6 +32,8 @@ main {
   height: 100%;
   align-items: center;
   justify-items: center;
+  filter: blur(2em) opacity(0%);
+  transition: 2200ms ease-in-out;
 }
 
 main span {
@@ -39,6 +44,7 @@ main span {
   background-color: rgba(255, 255, 255, 0.05);
   display: grid;
   border: solid 0.1em;
+  border-radius: 0.5em;
   padding: 0.4em;
   min-width: 90%;
   justify-items: center;
@@ -64,9 +70,8 @@ main span {
 
 /* EFFECTS */
 
-.black-bg {
-  background-color: black;
-  filter: drop-shadow(0 0 20px var(--accent-opposite));
+.filter-unset {
+  filter: none;
 }
 
 .glow {
@@ -74,13 +79,15 @@ main span {
 }
 
 .accent {
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
-  text-transform: uppercase;
+  border-radius: 0.5rem;
 }
 
-.invert {
-  filter: invert(1);
+.animation-effect {
+  text-transform: uppercase;
+  padding: 0 1rem 0 1rem;
+  background-color: var(--accent-color3);
+  border: solid 1px;
+  filter: drop-shadow(0 0 3em #fff);
 }
 
 a, a:hover, a:visited {
