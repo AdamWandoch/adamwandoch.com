@@ -72,6 +72,7 @@ main {
 .accent {
   background-color: var(--secondary-color);
   color: var(--accent-color);
+  /* filter: blur(5px); */
 }
 
 a, a:hover, a:visited {
