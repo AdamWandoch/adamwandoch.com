@@ -1,3 +1,7 @@
+window.addEventListener("click", function() {
+  location.href = "https://github.com/AdamWandoch/";
+});
+
 window.addEventListener("DOMContentLoaded", function() {
     const words = [
       "create",
