@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", function() {
       "software",
       "to",
       "Help",
+      "people!"
     ]
 
     for (let i = 0; i < words.length; i++) {
