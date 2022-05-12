@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const words = [
       "create",
       "software",
+      "to",
       "Help",
     ]
 

@@ -76,6 +76,7 @@ main span {
 .accent {
   background-color: var(--secondary-color);
   color: var(--accent-color);
+  text-transform: uppercase;
 }
 
 .invert {
