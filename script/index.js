@@ -16,9 +16,12 @@ window.addEventListener("DOMContentLoaded", function() {
       applyAccent(word);
     }
 
-    setInterval(toggle, 3000);
-
-  }) 
+    
+    setInterval(() => {
+    const spans = document.getElementsByClassName("accent");
+    animateWords(spans, 100);
+  }, 3000);
+});
 
 function applyAccent(searchString) {
   const paragraphs = document.getElementsByTagName("p");
@@ -32,13 +35,13 @@ function applyAccent(searchString) {
     }
   }
 }
-
-function toggle() {
-  const spans = document.getElementsByClassName("accent");
+  
+function animateWords(spans, delay) {
   for (let i = 0; i < spans.length; i++) {
     const span = spans[i];
-    if (span) {
+    const timeout = (i + 1) * delay;
+    setTimeout(() => {
       span.classList.toggle("invert");
-    }
+    }, timeout);
   }
 }
