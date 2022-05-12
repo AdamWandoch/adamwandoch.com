@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     setInterval(() => {
     const spans = document.getElementsByClassName("accent");
-    animateWords(spans, 100);
+    animateWords(spans, 200);
   }, 3000);
 });
 
@@ -39,6 +39,7 @@ function applyAccent(searchString) {
 function animateWords(spans, delay) {
   for (let i = 0; i < spans.length; i++) {
     const span = spans[i];
+    console.log(span);
     const timeout = (i + 1) * delay;
     setTimeout(() => {
       span.classList.toggle("invert");
