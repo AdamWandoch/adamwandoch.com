@@ -1,5 +1,8 @@
 window.addEventListener("click", function() {
-  location.href = "https://github.com/AdamWandoch/";
+  togglePageVisibility(0);
+  setTimeout(() => {
+    location.href = "https://github.com/AdamWandoch/";
+  }, 2000);
 });
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -8,16 +11,29 @@ window.addEventListener("DOMContentLoaded", function() {
       "software",
       "to",
       "Help",
+      "people!"
     ]
+
+    togglePageVisibility(1000);
 
     for (let i = 0; i < words.length; i++) {
       const word = words[i];
       applyAccent(word);
     }
+    
+    setInterval(() => {
+    const spans = document.getElementsByClassName("accent");
+    animateWords(spans, 200);
+  }, 3000);
+});
 
-    setInterval(toggle, 3000);
-
-  }) 
+function togglePageVisibility(timeout) {
+  // reveal the page
+  const main = document.querySelector("main");
+  setTimeout(() => {
+    main.classList.toggle("filter-unset");
+  }, timeout);
+}
 
 function applyAccent(searchString) {
   const paragraphs = document.getElementsByTagName("p");
@@ -31,13 +47,13 @@ function applyAccent(searchString) {
     }
   }
 }
-
-function toggle() {
-  const spans = document.getElementsByClassName("accent");
+  
+function animateWords(spans, delay) {
   for (let i = 0; i < spans.length; i++) {
     const span = spans[i];
-    if (span) {
-      span.classList.toggle("invert");
-    }
+    const timeout = (i + 1) * delay;
+    setTimeout(() => {
+      span.classList.toggle("animation-effect");
+    }, timeout);
   }
 }
