@@ -10,6 +10,8 @@ window.addEventListener("DOMContentLoaded", function() {
       applyAccent(element);
     }
 
+    setInterval(toggle, 3000);
+
   }) 
 
 function applyAccent(searchString) {
@@ -21,6 +23,17 @@ function applyAccent(searchString) {
                       searchString,
                       "<span class=\"accent\">" + searchString + "</span>");
       paragraph.innerHTML = newString;
+    }
+  }
+}
+
+function toggle() {
+  const spans = document.getElementsByClassName("accent");
+  for (let i = 0; i < spans.length; i++) {
+    const element = spans[i];
+    if (element) {
+      element.classList.toggle("invert");
+      // setTimeout(element.classList.toggle("invert"), 100);
     }
   }
 }

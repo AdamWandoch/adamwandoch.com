@@ -31,6 +31,10 @@ main {
   justify-items: center;
 }
 
+main span {
+  transition: 1500ms ease-in-out;
+}
+
 .item {
   background-color: rgba(255, 255, 255, 0.05);
   display: grid;
@@ -72,7 +76,10 @@ main {
 .accent {
   background-color: var(--secondary-color);
   color: var(--accent-color);
-  /* filter: blur(5px); */
+}
+
+.invert {
+  filter: invert(1);
 }
 
 a, a:hover, a:visited {
