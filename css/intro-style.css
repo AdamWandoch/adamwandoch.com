@@ -50,6 +50,10 @@ main span {
   align-items: center;
 }
 
+#anywhere {
+  padding: 0.4em;
+}
+
 #portrait {
   border-radius: 9999px;
   border: solid 0.15em var(--primary-color);

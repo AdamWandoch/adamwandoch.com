@@ -1,7 +1,7 @@
 window.addEventListener("click", function() {
   togglePageVisibility(0);
   setTimeout(() => {
-    location.href = location.href.replace("intro", "home");
+    location.replace("http://www.adamwandoch.com/home.html");
   }, 2000);
 });
 
