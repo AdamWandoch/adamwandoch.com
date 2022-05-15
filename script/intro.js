@@ -1,30 +1,36 @@
 window.addEventListener("click", function() {
   togglePageVisibility(0);
   setTimeout(() => {
-    location.href = "https://github.com/AdamWandoch/";
+    location.href = this.location.href.replace("intro", "index");
   }, 2000);
 });
 
 window.addEventListener("DOMContentLoaded", function() {
-    const words = [
-      "create",
-      "software",
-      "to",
-      "Help",
-      "people!"
-    ]
+  const words = [
+    "create",
+    "software",
+    "to",
+    "Help",
+    "people!"
+  ]
 
-    togglePageVisibility(1000);
+  togglePageVisibility(1000);
 
-    for (let i = 0; i < words.length; i++) {
-      const word = words[i];
-      applyAccent(word);
-    }
-    
-    setInterval(() => {
-    const spans = document.getElementsByClassName("accent");
-    animateWords(spans, 200);
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    applyAccent(word);
+  }
+  
+  setInterval(() => {
+  const spans = document.getElementsByClassName("accent");
+  animateWords(spans, 200);
   }, 3000);
+
+  setTimeout(() => {
+    let anywhere = document.getElementById("anywhere");
+    anywhere.style.filter = "opacity(100%)";
+  }, 5000);
+
 });
 
 function togglePageVisibility(timeout) {

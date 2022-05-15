@@ -18,8 +18,7 @@ html, body {
 }
 
 body {
-  margin: 0.5em 0 0.5em 0;
-  background-image: url(/img/stars_original.jpg);
+  background-image: url(../img/stars_original.jpg);
   background-repeat: round;
   background-size: 100%;
   color: var(--primary-color);
@@ -66,6 +65,16 @@ main span {
 #photo {
   background-color: unset;
   border: unset;
+}
+
+#photo > div {
+  filter: opacity(0%);
+  font-size: 0.8em;
+  position: relative;
+  transform: translate(8em);
+  border-radius: 0.5em;
+  text-transform: lowercase;
+  transition: 1000ms ease-in-out;
 }
 
 /* EFFECTS */
