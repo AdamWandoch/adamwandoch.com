@@ -1,7 +1,7 @@
 window.addEventListener("click", function() {
   togglePageVisibility(0);
   setTimeout(() => {
-    location.href = this.location.href.replace("intro", "index");
+    location.href = this.location.href.replace("intro", "home");
   }, 2000);
 });
 
