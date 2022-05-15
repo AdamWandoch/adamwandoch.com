@@ -2,4 +2,4 @@
 ### Exploring front-end tech.
 
 HTML/CSS/JS, basics in action.
-[adamwandoch.com](https://adamwandoch.herokuapp.com/)
+[www.adamwandoch.com](http://www.adamwandoch.herokuapp.com/)
