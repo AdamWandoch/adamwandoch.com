@@ -19,10 +19,11 @@ html, body {
 
 a, a:hover, a:visited {
   /* text-decoration: none; */
-  color: #fff;
+  color: var(--primary-color);
 }
 
 body {
+  margin:0px 0.4em;
   background-image: url(../img/stars_original.jpg);
   background-repeat: round;
   background-size: 100%;
@@ -30,9 +31,23 @@ body {
   font-family: Poppins;
   display: grid;
   grid: 1fr / 1fr;
+  filter: drop-shadow(0 0 0.5em #fff);
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h4 > span {
+  font-size: 0.8em;
+  font-family: Alata;
+  transform: scale(2);
 }
 
 main {
+  min-width: 75%;
+  padding: 0 0.4em;
+  border: solid 0.07em;
   justify-self: center;
   align-self: center;
   text-align: center;
