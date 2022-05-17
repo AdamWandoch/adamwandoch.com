@@ -21,7 +21,6 @@ body {
   color: var(--primary-color);
   font-family: Poppins;
   background-color: var(--secondary-color);
-  /* background-position: right 20px; */
   margin: 0 10%;
 }
 
@@ -48,13 +47,14 @@ img {
   align-self: center;
 }
 
-aside img {
-  width: 5em;
+#portrait {
+  width: 8em;
+  filter: brightness(110%) saturate(100%);
 }
 
-section img {
+#desktop {
+  transition: 1000ms ease-in-out;
   width: 10em;
-  filter: saturate(0%);
 }
 
 article {
@@ -95,12 +95,26 @@ h1 {
   filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
 }
 
+#developer {
+  transition: 1000ms ease-in-out;
+}
+
 /* EFFECTS */
 
-.gradient {
-  background: -webkit-linear-gradient(135deg, rgb(0, 255, 64), rgb(255, 0, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gradient-initial {
+  color: rgb(247, 0, 255);
+}
+
+.gradient-change {
+  color: rgb(46, 60, 255);
+}
+
+.desktop-initial {
+  filter: saturate(0%);
+}
+
+.desktop-change {
+  filter: saturate(100%);
 }
 
 /* MEDIA QUERIES */
