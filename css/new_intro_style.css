@@ -95,6 +95,16 @@ h1 {
   filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
 }
 
+/* EFFECTS */
+
+.gradient {
+  background: -webkit-linear-gradient(135deg, rgb(0, 255, 64), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* MEDIA QUERIES */
+
 @media only screen and (min-width: 600px) {
   h1,
   p,
