@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: Poppins;
+  background-color: var(--secondary-color);
+  /* background-position: right 20px; */
+  margin: 0 10%;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  grid: 1fr 1fr 1fr;
+  gap: 0;
+}
+
+aside,
+section,
+main,
+img {
+  /* border: solid 1px; */
+  align-self: center;
+}
+
+aside img {
+  width: 5em;
+}
+
+section img {
+  width: 10em;
+  filter: saturate(0%);
+}
+
+article {
+  text-align: center;
+  align-self: center;
+  z-index: 1;
+}
+
+section, aside {
+  justify-self: center;
+}
+
+
+h1 {
+  margin-top: 5%;
+  font-size: 1.8em;
+}
+
+p {
+  margin: 1%;
+}
+
+#cta {
+  color: white;
+  background-color: transparent;
+  border-radius: 0.3em;
+  border: solid 2px #fff;
+  padding: 0 2em;
+  margin-top: 10%;
+  font-size: 1.2em;
+  font-family: Poppins;
+  cursor: pointer;
+}
+
+#cta,
+p,
+h1 {
+  filter: drop-shadow(0 0 0.5em rgb(255, 255, 255));
+}
+
+@media only screen and (min-width: 600px) {
+  h1,
+  p,
+  #cta,
+  img {
+    transform: scale(120%);
+  }
+
+  body {
+    margin: 0 20%;
+  }
+
+  aside {
+    justify-self: unset;
+  }
+
+  section {
+    justify-self: right;
+  }
+
+  aside img {
+    position: absolute;
+    top: 20%;
+  }
+
+  section img {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1,
+  p,
+  #cta,
+  img {
+    transform: scale(130%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  h1,
+  p,
+  #cta,
+  img {
+    transform: scale(160%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  h1,
+  p,
+  #cta,
+  img {
+    transform: scale(170%);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  h1,
+  p,
+  #cta,
+  img {
+    transform: scale(190%);
+  }
+}
+
+@media only screen and (min-width: 1919px) {
+  h1,
+  p,
+  #cta,
+  img {
+    transform: scale(220%);
+  }
+}
