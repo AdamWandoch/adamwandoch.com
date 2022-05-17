@@ -13,6 +13,8 @@
 body,
 html {
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,13 +25,16 @@ body {
   margin: 0 10%;
 }
 
-a, a:hover, a:visited {
+a,
+a:hover,
+a:visited {
   text-decoration: none;
   color: unset;
 }
 
 main {
   height: 100%;
+  max-width: 100%;
   display: grid;
   grid: 1fr 1fr 1fr;
   gap: 0;
@@ -58,10 +63,10 @@ article {
   z-index: 1;
 }
 
-section, aside {
+section,
+aside {
   justify-self: center;
 }
-
 
 h1 {
   margin-top: 5%;
@@ -154,7 +159,7 @@ h1 {
   p,
   #cta,
   img {
-    transform: scale(190%);
+    transform: scale(250%);
   }
 }
 
@@ -163,6 +168,6 @@ h1 {
   p,
   #cta,
   img {
-    transform: scale(220%);
+    transform: scale(300%);
   }
 }
