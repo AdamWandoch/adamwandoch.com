@@ -1,9 +1,6 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
-  --accent-color: rgb(255, 102, 0);
-  --accent-color2: rgb(0, 102, 255);
-  --accent-color3: rgb(255, 171, 74);
 }
 
 * {
@@ -24,38 +21,41 @@ a, a:hover, a:visited {
 
 body {
   margin:0px 0.4em;
-  background-image: url(../img/stars_original.jpg);
-  background-repeat: round;
-  background-size: 100%;
+  background-color: var(--secondary-color);
   color: var(--primary-color);
   font-family: Poppins;
   display: grid;
-  grid: 1fr / 1fr;
+  align-content: center;
+  justify-content: center;
   filter: drop-shadow(0 0 0.5em #fff);
 }
 
-h1 {
-  font-size: 1.5em;
+img {
+  display: inline;
+  width: 3em;
+  margin: 1em;
 }
 
-h4 > span {
-  font-size: 0.8em;
+h1 {
+  font-size: 3em;
+}
+
+h4 {
+  /* font-size: 0.8em; */
   font-family: Alata;
-  transform: scale(2);
 }
 
 main {
-  min-width: 75%;
-  padding: 0 0.4em;
+  padding: 1em 2em;
   border: solid 0.07em;
   justify-self: center;
   align-self: center;
+  
   text-align: center;
 }
 
 @media (min-width: 1024px) {
   body {
-    background-image: url(/img/stars_horizontal.jpg);
     font-size: 1.7em;
   }
 }
