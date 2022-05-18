@@ -18,9 +18,10 @@ html, body {
 }
 
 body {
-  background-image: url(../img/stars_original.jpg);
+/*   background-image: url(../img/stars_original.jpg);
   background-repeat: round;
-  background-size: 100%;
+  background-size: 100%; */
+  background-color: #000;
   color: var(--primary-color);
   font-family: Poppins;
   filter: blur(2px);
