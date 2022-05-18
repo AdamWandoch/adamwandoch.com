@@ -49,13 +49,13 @@ img {
 }
 
 #portrait {
-  width: 8em;
+  width: 10em;
   filter: brightness(110%) saturate(100%);
 }
 
 #desktop {
   transition: 1000ms ease-in-out;
-  width: 10em;
+  width: 12em;
 }
 
 article {
@@ -70,7 +70,6 @@ aside {
 }
 
 h1 {
-  margin-top: 10%;
   font-size: 1.8em;
 }
 
@@ -107,7 +106,7 @@ h1 {
 }
 
 .gradient-change {
-  color: rgb(46, 60, 255);
+  color: rgb(31, 136, 255);
 }
 
 .desktop-initial {
@@ -116,6 +115,15 @@ h1 {
 
 .desktop-change {
   filter: saturate(100%);
+}
+
+.hidden {
+  transition: 700ms ease-in-out;
+  opacity: 0%;
+}
+
+.revealed {
+  opacity: 100%;
 }
 
 /* MEDIA QUERIES */
@@ -176,6 +184,10 @@ h1 {
   #cta,
   img {
     transform: scale(170%);
+  }
+
+  h1 {
+    margin: 1.5em;
   }
 }
 
