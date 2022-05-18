@@ -1,4 +1,4 @@
-const api_url = "https://indeed-bot-api.herokuapp.com/jobs/title/front";
+const api_url = "https://indeed-bot-api.herokuapp.com/jobs/";
 
 async function displayCards() {
   const response = await fetch(api_url);
