@@ -1,23 +1,34 @@
 :root {
   --bg-color: rgb(28, 52, 61);
+  --bg2-color: rgb(168, 168, 168);
 }
 
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   background-color: var(--bg-color);
   color: rgb(148, 193, 235);
-  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+}
+
+.wrapper {
   margin: 0 1rem;
+}
+
+header {
+  background-color: rgb(80, 74, 74);
+  border-bottom: solid 0.1rem;
+  margin-bottom: 1rem;
 }
 
 main {
@@ -28,7 +39,8 @@ main {
   margin: auto;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: unset;
   text-decoration: none;
 }
@@ -36,7 +48,7 @@ a, a:visited {
 h1 {
   font-size: 1.6rem;
   text-align: center;
-  padding: 1rem 0;;
+  padding: 1rem 0;
 }
 
 h2 {
@@ -49,7 +61,10 @@ h3 {
   padding: 0.5rem 0;
 }
 
-h1, h2, h3, .form {
+h1,
+h2,
+h3,
+.form {
   filter: drop-shadow(3px 3px 2px #000);
 }
 
