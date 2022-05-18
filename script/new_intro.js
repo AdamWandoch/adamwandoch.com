@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function() {
   setTimeout(() => {
     typingAnimation("header2", "for a developer?", 100);
     
-  }, 9500);
+  }, 9300);
 
   setTimeout(() => {
     document.getElementById("portrait").classList.add("revealed");
