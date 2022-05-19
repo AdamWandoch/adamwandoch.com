@@ -14,11 +14,40 @@
     </header>
     <div class="wrapper">
       <main>
-        <section class="form">TODO: implement filter form here</section>
-        <h3>Records found:</h3>
-        <section id="records">Please enter serach criteria above.</section>
+        <section class="form">
+          <div class="input" id="keywordWrap">
+            <label for="keyword">Search for a keyword:</label>
+            <input
+              type="text"
+              name="keyword"
+              id="keyword" size="3"
+              placeholder="all records if blank"
+            />
+          </div>
+          <div class="input">
+            <label for="where">In:</label>
+            <select name="where" id="where" size="3" required>
+              <option value="title" selected>Job title</option>
+              <option value="company">Company</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="sort">Sort by:</label>
+            <select name="sort" id="sort" size="3">
+              <option value="none" selected>None</option>
+              <option value="title">Title</option>
+              <option value="company">Company</option>
+            </select>
+          </div>
+          <button class="input" onclick="displayCards()">Search</button>
+        </section>
+        <h3></h3>
+        <section id="records">
+          Please enter search criteria above and use the search button.
+        </section>
       </main>
       <script src="dashboard.js"></script>
     </div>
+    <footer><h2>&COPY;<a href="https://github.com/AdamWandoch" target="_blank"> AdamWandoch </a>2022</h2></footer>
   </body>
 </html>

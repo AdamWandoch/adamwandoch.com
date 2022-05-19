@@ -1,6 +1,7 @@
 :root {
   --bg-color: rgb(28, 52, 61);
   --bg2-color: rgb(168, 168, 168);
+  --bg3-color: rgb(80, 74, 74);
 }
 
 * {
@@ -26,23 +27,38 @@ body {
 }
 
 header {
-  background-color: rgb(80, 74, 74);
+  background-color: var(--bg-color);
   border-bottom: solid 0.1rem;
   margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5rem rgb(0, 0, 0));
 }
 
+footer {
+  background-color: var(--bg-color);
+  border-top: solid 0.1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  min-height: 7VH;
+  filter: drop-shadow(0 0 5rem rgb(0, 0, 0));
+}
+
+
+
 main {
-  justify-items: center;
-  justify-content: center;
-  justify-self: center;
   max-width: 1300px;
   margin: auto;
+  min-height: 80vh;
+  filter: drop-shadow(0 0 5rem rgb(0, 0, 0));
 }
 
 a,
 a:visited {
   color: unset;
   text-decoration: none;
+}
+
+footer a, footer a:visited {
+  color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -59,13 +75,32 @@ h2 {
 
 h3 {
   padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 h1,
 h2,
 h3,
-.form {
+.form,
+section {
   filter: drop-shadow(3px 3px 2px #000);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+}
+
+input, select {
+  width: 100%;
+  /* size: 3; */
+}
+
+button {
+  padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
 }
 
 .card {
@@ -101,6 +136,19 @@ h3,
 @media (min-width: 530px) {
   #records {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #keywordWrap {
+    grid-column: span 3;
+  }
+
+  button {
+    height: 3.2rem;
+    margin-top: 1.05rem;
   }
 }
 
