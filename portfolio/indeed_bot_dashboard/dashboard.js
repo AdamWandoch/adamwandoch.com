@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://indeed-bot-api.herokuapp.com/jobs/";
+const BASE_API_URL = "https://indeed-bot-api.herokuapp.com/jobs";
 
 async function displayCards() {
   document.getElementById("records").textContent = "Waiting for data..";
@@ -7,10 +7,10 @@ async function displayCards() {
   const sort = document.getElementById("sort").value;
   let api_url = BASE_API_URL;
   if (keyword !== "") {
-    api_url += `${document.getElementById("where").value}/${keyword}`;
-    if (sort !== "none") {
-      api_url += `/sort/${sort}`;
-    }
+    api_url += `/${document.getElementById("where").value}/${keyword}`;
+  }
+  if (sort !== "none") {
+    api_url += `/sort/${sort}`;
   }
   
   const response = await fetch(api_url);
