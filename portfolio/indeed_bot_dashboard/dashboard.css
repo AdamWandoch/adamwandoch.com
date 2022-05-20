@@ -53,12 +53,7 @@ main {
 
 a,
 a:visited {
-  color: unset;
-  text-decoration: none;
-}
-
-footer a, footer a:visited {
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 h1 {
