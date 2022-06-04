@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Intro } from './Intro';
+import { Home } from './Home';
+import { useState } from 'react';
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  const parentControl = (boolean) => {
+    console.log('executing from parent');
+    setShowIntro(boolean);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      {showIntro ? <Intro callback={parentControl} /> : <Home />}
     </div>
   );
 }
