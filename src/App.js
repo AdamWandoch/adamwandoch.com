@@ -7,7 +7,6 @@ function App() {
   const [showIntro, setShowIntro] = useState(true);
 
   const parentControl = (boolean) => {
-    console.log('executing from parent');
     setShowIntro(boolean);
   };
 

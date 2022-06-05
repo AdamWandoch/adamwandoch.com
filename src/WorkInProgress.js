@@ -27,6 +27,7 @@ export const WorkInProgress = () => {
     textDecoration: 'underline',
   };
 
+  // JSX
   return (
     <>
       <main style={mainStyle}>

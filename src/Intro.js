@@ -8,7 +8,7 @@ export const Intro = ({ callback }) => {
     }, 1000);
 
     setTimeout(() => {
-      typingAnimation('p2', "I'm looking for a change.", 100);
+      typingAnimation('p2', "I'm looking for a team.", 100);
     }, 3500);
 
     setTimeout(() => {
@@ -44,7 +44,6 @@ export const Intro = ({ callback }) => {
 
     setTimeout(() => {
       developerWordAnimation();
-      // desktopAnimation();
     }, 14000);
   };
 
@@ -66,10 +65,8 @@ export const Intro = ({ callback }) => {
 
   function developerWordAnimation() {
     const developer = document.getElementById('developer');
-    console.log('adding gradient-initial');
     developer.classList.add('gradient-initial');
     setInterval(() => {
-      console.log('toggle gradient-change');
       developer.classList.toggle('gradient-change');
     }, 1200);
   }
