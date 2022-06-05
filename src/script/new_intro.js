@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function() {
   }, 1000);
 
   setTimeout(() => {
-    typingAnimation("p2", "I'm looking for a change.", 100);
+    typingAnimation("p2", "I'm looking for a team.", 100);
   }, 3500);
 
   setTimeout(() => {
