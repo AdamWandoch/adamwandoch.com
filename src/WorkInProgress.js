@@ -15,7 +15,7 @@ export const WorkInProgress = () => {
     margin: '4% 0 5% 0',
   };
   const h1Style = {
-    fontSize: '3em',
+    fontSize: '2em',
     textAlign: 'center',
     margin: '0.3em',
   };
