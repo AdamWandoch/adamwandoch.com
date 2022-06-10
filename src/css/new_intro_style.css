@@ -11,7 +11,7 @@
 }
 
 body,
-html {
+html, #root, .App {
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -69,7 +69,7 @@ aside {
   justify-self: center;
 }
 
-h1 {
+#header1, #header2 {
   font-size: 1.8em;
 }
 
@@ -109,10 +109,6 @@ h1 {
   color: rgb(31, 136, 255);
 }
 
-.desktop-initial {
-  filter: saturate(0%);
-}
-
 .desktop-change {
   filter: saturate(100%);
 }
@@ -129,10 +125,10 @@ h1 {
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 600px) {
-  h1,
+  #header1, #header2,
   p,
   #cta,
-  img {
+  #portrait, #desktop {
     transform: scale(120%);
   }
 
@@ -148,12 +144,12 @@ h1 {
     justify-self: right;
   }
 
-  aside img {
+  #portrait {
     position: absolute;
     top: 20%;
   }
 
-  section img {
+  #desktop {
     position: absolute;
     bottom: 10%;
     right: 10%;
@@ -161,50 +157,50 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) {
-  h1,
+  #header1, #header2,
   p,
   #cta,
-  img {
+  #portrait, #desktop {
     transform: scale(130%);
   }
 }
 
 @media only screen and (min-width: 992px) {
-  h1,
+  #header1, #header2,
   p,
   #cta,
-  img {
+  #portrait, #desktop {
     transform: scale(160%);
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  h1,
+  #header1, #header2,
   p,
   #cta,
-  img {
+  #portrait, #desktop {
     transform: scale(170%);
   }
 
-  h1 {
+  #header1, #header2 {
     margin: 1.5em;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  h1,
+  #header1, #header2,
   p,
   #cta,
-  img {
+  #portrait, #desktop {
     transform: scale(250%);
   }
 }
 
 @media only screen and (min-width: 1919px) {
-  h1,
+  #header1, #header2,
   p,
   #cta,
-  img {
+  #portrait, #desktop {
     transform: scale(300%);
   }
 }
