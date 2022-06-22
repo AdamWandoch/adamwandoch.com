@@ -6,7 +6,6 @@ export const WorkInProgress = () => {
   // styles
   const mainStyle = {
     padding: '1em 2em',
-    border: 'solid 0.07rem',
     justifySelf: 'center',
     alignSelf: 'center',
     textAlign: 'center',
