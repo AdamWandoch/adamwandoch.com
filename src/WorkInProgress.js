@@ -42,19 +42,12 @@ export const WorkInProgress = () => {
           meanwhile check{' '}
           <a
             style={aStyle}
-            href='https://indeed-bot-dashboard.netlify.app/'
+            href='https://social-app-prototype.netlify.app/'
             target='_blank'
           >
             this
           </a>{' '}
-          and{' '}
-          <a
-            style={aStyle}
-            href='https://adams-guestbook.netlify.app/'
-            target='_blank'
-          >
-            this
-          </a>
+          project
         </h4>
         <h4>or find me on social</h4>
         <div className='logos'>
