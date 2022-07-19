@@ -1,76 +1,13 @@
 import './css/new_intro_style.css';
+import { initialize } from './intro-logic';
+import github from './img/github.svg';
+import linkedin from './img/linkedin.svg';
+const logoStyle = {
+  width: '5rem',
+  margin: '1rem',
+};
 
-export const Intro = ({ callback }) => {
-  // intro startup function
-  const initialize = () => {
-    setTimeout(() => {
-      typingAnimation('p1', "Hi, I'm Adam.", 100);
-    }, 1000);
-
-    setTimeout(() => {
-      typingAnimation('p2', "I'm looking for a team.", 100);
-    }, 3500);
-
-    setTimeout(() => {
-      typingAnimation('header1', 'Are you looking', 100);
-    }, 7500);
-
-    setTimeout(() => {
-      typingAnimation('header2', 'for a developer?', 100);
-    }, 9300);
-
-    setTimeout(() => {
-      document.getElementById('portrait').classList.add('revealed');
-    }, 11500);
-
-    setTimeout(() => {
-      document.getElementById('cta').classList.add('revealed');
-    }, 11800);
-
-    setTimeout(() => {
-      document.getElementById('desktop').classList.add('revealed');
-    }, 12100);
-
-    setTimeout(() => {
-      let h2 = document.getElementById('header2');
-      const span = document.getElementById('developer');
-      if (!span) {
-        h2.innerHTML = h2.innerHTML.replace(
-          'developer',
-          "<span id='developer'>developer</span>"
-        );
-      }
-    }, 13000);
-
-    setTimeout(() => {
-      developerWordAnimation();
-    }, 14000);
-  };
-
-  // animation functions
-  function typingAnimation(id, text, speed) {
-    let element = document.getElementById(id);
-    let textPosition = 0;
-    element.textContent = '';
-
-    writingFunc();
-
-    function writingFunc() {
-      element.textContent = text.substring(0, textPosition);
-      if (textPosition++ !== text.length) {
-        setTimeout(writingFunc, speed);
-      }
-    }
-  }
-
-  function developerWordAnimation() {
-    const developer = document.getElementById('developer');
-    developer.classList.add('gradient-initial');
-    setInterval(() => {
-      developer.classList.toggle('gradient-change');
-    }, 1200);
-  }
-
+export const Intro = () => {
   initialize();
 
   // JSX
@@ -89,12 +26,10 @@ export const Intro = ({ callback }) => {
         <p id='p2'></p>
         <h1 id='header1'></h1>
         <h1 id='header2'></h1>
-        <button
-          onClick={() => callback(false)}
-          id='cta'
-          className='hidden'
-        >
-          LEARN MORE
+        <button id='cta' className='hidden'>
+          <a href='https://www.linkedin.com/in/adam-wandoch/' target='_blank'>
+            GET IN TOUCH
+          </a>
         </button>
       </article>
       <section>
@@ -105,6 +40,28 @@ export const Intro = ({ callback }) => {
           alt='Keyboard and monitors with code on the screen.'
         />
       </section>
+      <a id='links'>
+        <section className='logos'>
+          <a href='https://github.com/AdamWandoch' target='_blank'>
+            <img
+              src={github}
+              style={logoStyle}
+              alt='GitHub'
+              id='github'
+              className='hidden'
+            />
+          </a>
+          <a href='https://www.linkedin.com/in/adam-wandoch/' target='_blank'>
+            <img
+              src={linkedin}
+              style={logoStyle}
+              alt='LinkedIn'
+              id='linkedin'
+              className='hidden'
+            />
+          </a>
+        </section>
+      </a>
     </main>
   );
 };
