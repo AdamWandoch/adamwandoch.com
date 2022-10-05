@@ -2,10 +2,6 @@ import './css/new_intro_style.css';
 import { initialize } from './intro-logic';
 import github from './img/github.svg';
 import linkedin from './img/linkedin.svg';
-const logoStyle = {
-  width: '5rem',
-  margin: '1rem',
-};
 
 export const Intro = () => {
   initialize();
@@ -45,7 +41,6 @@ export const Intro = () => {
           <a href='https://github.com/AdamWandoch' target='_blank'>
             <img
               src={github}
-              style={logoStyle}
               alt='GitHub'
               id='github'
               className='hidden'
@@ -54,7 +49,6 @@ export const Intro = () => {
           <a href='https://www.linkedin.com/in/adam-wandoch/' target='_blank'>
             <img
               src={linkedin}
-              style={logoStyle}
               alt='LinkedIn'
               id='linkedin'
               className='hidden'
