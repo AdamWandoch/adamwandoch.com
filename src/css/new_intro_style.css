@@ -46,18 +46,26 @@ aside,
 section,
 main,
 img {
-  /* border: solid 1px; */
   align-self: center;
 }
 
 #portrait {
-  width: 10em;
+  width: 10rem;
   filter: brightness(110%) saturate(100%);
 }
 
 #desktop {
   transition: 1000ms ease-in-out;
   width: 12em;
+}
+
+@media (max-width: 700px) {
+  #portrait {
+    width: 6rem;
+  }
+  #desktop {
+    width: 8rem;
+  }
 }
 
 article {
